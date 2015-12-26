@@ -3,7 +3,7 @@
 
 ## AnyKernel setup
 # EDIFY properties
-kernel.string=God's-Kernel @ AudioGod
+kernel.string=Gods-Kernel @ AudioGod
 do.devicecheck=1
 do.initd=1
 do.modules=1
@@ -190,6 +190,14 @@ chmod -R 755 $ramdisk
 dump_boot;
 
 # begin ramdisk changes
+
+#Add custom loader script
+found=$(find init.rc -type f | xargs grep -oh "import /init.god.rc");
+if [ "$found" != 'import /init.god.rc' ]; then
+	#append the new lines for this option at the bottom
+        echo "" >> init.rc
+	echo "import /init.god.rc" >> init.rc
+fi
 
 # end ramdisk changes
 
