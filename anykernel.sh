@@ -3,7 +3,7 @@
 
 ## AnyKernel setup
 # EDIFY properties
-kernel.string=Gods-Kernel @ AudioGod
+kernel.string=Gods-Kernel By AudioGod 
 do.devicecheck=1
 do.initd=1
 do.modules=1
